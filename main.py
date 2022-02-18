@@ -26,6 +26,7 @@ class main():
                     # perpendicular line = [x-self.M_x, y-self.M_y, z-self.M_z]*t+[x, y, z]
                     # light ray line = [x-self.ls_M_x, y-self.ls_M_y, z-self.ls_M_z]*t+[self.ls_M_x, self.ls_M_y, self.ls_M_z]
                     # folgende formel rechnet den einfallswinkel bzw ausfallswinkel des lichtstrahls auf die Kugeloberfläche aus
+                    # https://www.mathe-online.at/materialien/Andreas.Pester/files/Vectors/winkel_zwischen_vektoren.htm
                     alpha = math.acos(((x - self.M_x) * (x - self.ls_M_x) + (y - self.M_y) * (y - self.ls_M_y) + (z-self.M_z) * (z - self.ls_M_z)) / (math.sqrt((x-self.M_x)**2+(y-self.M_y)**2+(z-self.M_z)**2)*math.sqrt((x-self.ls_M_x)**2+(y-self.ls_M_y)**2+(z-self.ls_M_z)**2)))
 
         return img
